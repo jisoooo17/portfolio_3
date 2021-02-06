@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+table, td, th {
+  border-collapse: collapse; }
+
+fieldset {
+  border: none; }
+
+input, a, button {
+  outline: 1; }
+
+.hidden {
+  position: absolute;
+  top: -9999px;
+  opacity: 0; }
+
+header {
+  width: 90%;
+  padding: 15px;
+  background: #efefef;
+  position: absolute;
+  top: 4vh;
+  left: 5%;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  opacity: 0.8; }
+  header h1 {
+    font: bold 20px/1  'Montserrat', sans-serif;
+    color: #222;
+    margin: 0px 3vw; }
+  header nav #gnb {
+    display: flex; }
+    header nav #gnb li {
+      position: relative;
+      margin: 0px 3vw; }
+      header nav #gnb li a {
+        font: bold 16px/1  'Montserrat', sans-serif;
+        color: #222; }
+        header nav #gnb li a::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -2px;
+          left: 0px;
+          width: 0%;
+          height: 0px;
+          background: #000;
+          opacity: 0;
+          transition: 0.5s; }
+        header nav #gnb li a:hover::before {
+          width: 100%;
+          height: 1px;
+          opacity: 1; }
+
+figure {
+  width: 100%;
+  height: 700px;
+  background: url(../img/bg2.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px; }
+  figure .inner {
+    width: 350px;
+    height: 200px;
+    background: #fff;
+    opacity: 0.8;
+    text-align: center;
+    position: relative; }
+    figure .inner .box {
+      width: 335px;
+      height: 185px;
+      border: 1px solid #444;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 55px 0px; }
+      figure .inner .box h1 {
+        font: bold 25px/1  'Montserrat', sans-serif;
+        position: relative;
+        margin-bottom: 35px; }
+        figure .inner .box h1::after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 1px;
+          background: #555;
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          margin: -15px 142px; }
+      figure .inner .box p {
+        font: bold 14px/1  'Montserrat', sans-serif;
+        color: #555; }
+
+section {
+  width: 100%;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(100px);
+  /* isotope layout */ }
+  section.on {
+    opacity: 1;
+    transform: translateY(0px); }
+  section .filter {
+    box-sizing: border-box;
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%); }
+    section .filter::after {
+      content: "";
+      display: block;
+      clear: both; }
+    section .filter li {
+      float: left;
+      margin-right: 40px;
+      text-align: center; }
+      section .filter li a {
+        display: block;
+        font: bold 16px/1 'Montserrat', sans-serif;
+        color: #555;
+        text-align: center;
+        position: relative; }
+        section .filter li a::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 3px;
+          left: -3px;
+          width: 115%;
+          height: 38%;
+          background: #8fd1ce7a;
+          transform: skewX(-20deg);
+          opacity: 0;
+          transition: 0.5s; }
+        section .filter li a.on {
+          color: #000; }
+          section .filter li a.on::before {
+            opacity: 1;
+            font-weight: bold; }
+  section .wrap {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 40px; }
+    section .wrap::after {
+      content: "";
+      display: block;
+      clear: both; }
+    section .wrap article {
+      width: calc(100% / 5);
+      float: left;
+      box-sizing: border-box;
+      padding: 7px; }
+      section .wrap article .inner {
+        width: 100%;
+        height: 100%; }
+        section .wrap article .inner img {
+          width: 100%; }
+
+@media screen and (max-width: 1179px) {
+  .wrap {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 40px; }
+    .wrap::after {
+      content: "";
+      display: block;
+      clear: both; }
+    .wrap article {
+      width: calc(100% / 4);
+      float: left;
+      box-sizing: border-box;
+      padding: 7px; }
+      .wrap article .inner {
+        width: 100%;
+        height: 100%; }
+        .wrap article .inner img {
+          width: 100%; } }
+@media screen and (max-width: 899px) {
+  .wrap article {
+    width: calc(100% / 3); } }
+@media screen and (max-width: 679px) {
+  .wrap article {
+    width: calc(100% / 2); } }
+@media screen and (max-width: 539px) {
+  .wrap article {
+    width: calc(100% / 1); } }
+
+/*# sourceMappingURL=style.scss.map */

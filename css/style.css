@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat:wght@200&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+table, td, th {
+  border-collapse: collapse; }
+
+fieldset {
+  border: none; }
+
+input, a, button {
+  outline: 1; }
+
+.hidden {
+  position: absolute;
+  top: -9999px;
+  opacity: 0; }
+
+body {
+  background: #fff; }
+  body header {
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    background: url(../img/bg2.jpg) no-repeat center/cover;
+    top: 0px;
+    left: 0px; }
+    body header .box {
+      width: 280px;
+      height: 180px;
+      background: #fff;
+      opacity: 0.8;
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center; }
+      body header .box .inner {
+        width: 265px;
+        height: 165px;
+        border: 1px solid #444;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 45px 0px; }
+        body header .box .inner h1 {
+          font: bold 22px/1  'Montserrat', sans-serif;
+          position: relative;
+          margin-bottom: 35px; }
+          body header .box .inner h1::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 1px;
+            background: #555;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            margin: -15px auto;
+            transform: translateX(-50%); }
+        body header .box .inner p {
+          font: bold 13px/1  'Montserrat', sans-serif;
+          color: #555; }
+    body header .sns {
+      position: absolute;
+      left: 55px;
+      bottom: 100px; }
+      body header .sns li {
+        margin-bottom: 5px; }
+        body header .sns li a {
+          font-size: 19px;
+          color: #fff; }
+          body header .sns li a span {
+            font: bold 16px/1  'Montserrat', sans-serif;
+            display: inline-block;
+            transform: scale(0.7);
+            letter-spacing: 1px; }
+  body section {
+    width: calc(100% - 400px);
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 400px;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(100px);
+    /* isotope layout */ }
+    body section.on {
+      opacity: 1;
+      transform: translateY(0px); }
+    body section .filter {
+      width: 100%;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      padding: 10px; }
+      body section .filter::after {
+        content: "";
+        display: block;
+        clear: both; }
+      body section .filter li {
+        float: left;
+        margin-right: 20px; }
+        body section .filter li:last-child {
+          margin-right: 0px; }
+        body section .filter li a {
+          display: block;
+          font: bold 14px/1 'Montserrat', sans-serif;
+          color: #555;
+          position: relative; }
+          body section .filter li a::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 3px;
+            left: -3px;
+            width: 115%;
+            height: 38%;
+            background: #8fd1ce7a;
+            transform: skewX(-20deg);
+            opacity: 0;
+            transition: 0.5s; }
+          body section .filter li a.on {
+            color: #000; }
+            body section .filter li a.on::before {
+              opacity: 1;
+              font-weight: bold; }
+    body section .wrap {
+      width: 100%;
+      box-sizing: border-box; }
+      body section .wrap::after {
+        content: "";
+        display: block;
+        clear: both; }
+      body section .wrap article {
+        width: calc(100% / 4);
+        float: left;
+        box-sizing: border-box;
+        padding: 10px;
+        position: relative; }
+        body section .wrap article .inner {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transition: 0.5s; }
+          body section .wrap article .inner img {
+            width: 100%; }
+          body section .wrap article .inner p {
+            position: absolute;
+            bottom: 15%;
+            left: 0px;
+            font: 13px/1.5  'Comfortaa', cursive;
+            color: #fff;
+            padding: 0px 20px;
+            opacity: 0;
+            transition: 0.5s;
+            z-index: 2; }
+          body section .wrap article .inner::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: linear-gradient(to top, #54dfdfd0, transparent);
+            opacity: 0;
+            transition: 0.5s;
+            z-index: 1; }
+          body section .wrap article .inner:hover::after, body section .wrap article .inner:hover p {
+            opacity: 1; }
+
+@media screen and (max-width: 1199px) {
+  body header {
+    width: 350px; }
+  body section {
+    width: calc(100% - 350px);
+    margin-left: 350px; }
+    body section .wrap article {
+      width: calc(100% / 3); } }
+@media screen and (max-width: 899px) {
+  body header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background: url(../img/bg1.jpg) no-repeat center/cover; }
+    body header .box {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      opacity: 1;
+      top: auto;
+      left: auto;
+      padding: 0px;
+      transform: none; }
+      body header .box .inner {
+        width: 100%;
+        height: 100%;
+        border: none;
+        left: auto;
+        top: auto;
+        transform: none; }
+        body header .box .inner h1 {
+          font: bold 20px/1  'Montserrat', sans-serif;
+          margin-bottom: 0px;
+          color: #fff;
+          text-align: left;
+          margin-left: 20px; }
+          body header .box .inner h1::after {
+            display: none; }
+        body header .box .inner p {
+          display: none; }
+    body header .sns {
+      position: absolute;
+      left: auto;
+      bottom: 10px;
+      right: 20px; }
+      body header .sns li {
+        margin-bottom: 0px;
+        float: left; }
+        body header .sns li a {
+          font-size: 18px;
+          margin-left: 20px; }
+          body header .sns li a span {
+            display: none; }
+  body section {
+    width: 100%;
+    margin-left: 0px;
+    position: relative; }
+    body section .filter {
+      margin-bottom: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    body section .wrap article {
+      width: calc(100% / 2); }
+      body section .wrap article .inner p {
+        font: 16px/1.5  'Comfortaa', cursive; } }
+@media screen and (max-width: 539px) {
+  body section .filter li a {
+    font: bold 12px/1 'Montserrat', sans-serif; }
+  body section .wrap article {
+    width: calc(100% / 1); }
+    body section .wrap article .inner p {
+      font: 2vh/1.5  'Comfortaa', cursive; } }
+
+/*# sourceMappingURL=style.css.map */
