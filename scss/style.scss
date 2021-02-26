@@ -10,6 +10,7 @@ body {
     
         .box {
             width: 280px; height: 180px; background: #fff; opacity: 0.8; position: absolute; top: 15%; left: 50%;transform: translateX(-50%); text-align: center;
+
             .inner {
                 width: 265px; height: 165px; border: 1px solid #444; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); padding: 45px 0px;
     
@@ -20,6 +21,7 @@ body {
                         content: ""; display: block; width: 50px; height: 1px ; background: #555; position: absolute; bottom: 0px; left: 50%; margin: -15px auto; transform: translateX(-50%);
                     }
                 }
+
                 p {
                     font: bold 13px/1  'Montserrat', sans-serif; color: #555; 
                 }
@@ -116,9 +118,7 @@ body {
             }
         }
     }
-    
 }
-
 
 @media screen and (max-width:1199px){  
    body {
@@ -157,11 +157,13 @@ body {
                            display: none;
                         }
                     }
+
                     p {
                         display: none;
                     }
                 }
             }
+
             .sns {
                 position:absolute; left:auto; bottom:10px; right: 20px;
             
@@ -177,9 +179,9 @@ body {
                 }
             }
         }
+
         section {
             width:100%; margin-left:0px; position: relative; 
-    
             
             .filter {
                 margin-bottom: 0px; display: flex; justify-content: center; align-items: center;
@@ -196,11 +198,9 @@ body {
                     }
                 }
             }
-            
         }
     }
 }
-
 
 @media screen and (max-width:539px){
     body {
@@ -213,6 +213,7 @@ body {
                     }
                 }
             }
+
             .wrap {
                 article {
                     width:calc(100% / 1); 
@@ -224,7 +225,6 @@ body {
                     }
                 }
             }
-            
         }
     }
 }
